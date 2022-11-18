@@ -59,8 +59,6 @@ class Work {
         this.list[taskId] = this.list[taskId].replace(this.status, '(Выполнено)')
         this.askUser()
     }
-
-
 }
 
 module.exports = Work;

@@ -12,6 +12,6 @@ const status = '(Не выполнено)'
 // Превращаем наш лист в массив
 const toDoList = new SortList(list, status)
 
+// Запуск 
 const process = new Work(toDoList.sorting(), status);
-
 process.askUser()
