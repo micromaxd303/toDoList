@@ -29,10 +29,7 @@ class Work {
 
   /** Спрашиваем пользователя какие дела он сегодня выполнил */
   askUser() {
-    let answer = readlineSync.keyInSelect(
-      this.list,
-      "Что вы выполнили сегодня ?"
-    );
+    let answer = readlineSync.keyInSelect(this.list,"Что вы выполнили сегодня ?");
     this.checkAnswer(answer);
   }
 
@@ -42,11 +39,11 @@ class Work {
    * @param {} answer
    */
   checkAnswer(answer) {
-    if (answer > 0) {
-      this.placeMark(answer);
-    } else {
+    if (answer == -1) {
       console.log("Пон. удачного дня");
       this.showList();
+    } else {
+      this.placeMark(answer);
     }
   }
 
